@@ -2535,6 +2535,39 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {
+        "0x71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "RetailerAdded",
+          "type": "event"
+        },
+        "0xdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "RetailerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xfA43586cae065208b81f7d1a8bE64FCBA5b2043B",
+      "transactionHash": "0x364658d8d76f82b6284101b2b900e51635b76effc854084a47ebfbb5b6deeeee"
+    },
     "1589466110000": {
       "events": {},
       "links": {},
@@ -2546,10 +2579,44 @@
       "links": {},
       "address": "0x79051A2faFcC216A55d3897474012145d158F170",
       "transactionHash": "0xa889dbf089edf468a4b40b8e3e8114c4ada007c61dd7da829704e44366401c31"
+    },
+    "1589568531527": {
+      "events": {
+        "0x71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "RetailerAdded",
+          "type": "event"
+        },
+        "0xdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "RetailerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x79051A2faFcC216A55d3897474012145d158F170",
+      "transactionHash": "0x93ad1f6d6fb022d10a8566006794a39e9c10799fa5462512d6ab0b0bd6031316"
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-15T06:34:19.845Z",
+  "updatedAt": "2020-05-15T19:01:50.788Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

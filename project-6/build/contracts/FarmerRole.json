@@ -2535,6 +2535,39 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {
+        "0x2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerAdded",
+          "type": "event"
+        },
+        "0xa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xFfB68725bAA5ae3A68B856a615Aa1b06fA011faD",
+      "transactionHash": "0x8bb6a7988256e05b4c15643f4e98086d3df59e3869c6f89559d69d5e1a38720d"
+    },
     "1589466110000": {
       "events": {},
       "links": {},
@@ -2571,10 +2604,44 @@
       "links": {},
       "address": "0xf2ee0b0Cdcae5013930B92c0Ba54F7F7f1933613",
       "transactionHash": "0xebc127e7bc0e2fa0a9df6d66fe29c0e61171983f52b3bb9e36af5414c9ba1785"
+    },
+    "1589568531527": {
+      "events": {
+        "0x2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerAdded",
+          "type": "event"
+        },
+        "0xa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xf2ee0b0Cdcae5013930B92c0Ba54F7F7f1933613",
+      "transactionHash": "0xd5041d6a3444df6f2d63af935a576461faac1a6591e0d6dc49e521176286dbca"
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-15T06:34:19.838Z",
+  "updatedAt": "2020-05-15T19:01:50.758Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

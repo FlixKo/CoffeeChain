@@ -1,16 +1,20 @@
 pragma solidity ^0.5.12;
+
+import "../coffeecore/Ownable.sol";
+
 import "../coffeeaccesscontrol/ConsumerRole.sol";
 import "../coffeeaccesscontrol/DistributorRole.sol";
 import "../coffeeaccesscontrol/FarmerRole.sol";
 import "../coffeeaccesscontrol/RetailerRole.sol";
 
+
 // Define a contract 'Supplychain'
-contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole {
+contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, RetailerRole {
 
   // owner is defined in Ownable
-  // address payable owner;
+  address payable owner;
 
-  // Define a variable called 'upc' for Universal Product Code (UPC)
+  // Define a variable called 'upc'  for Universal Product Code (UPC)
   uint  upc;
 
   // Define a variable called 'sku' for Stock Keeping Unit (SKU)
@@ -146,7 +150,7 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole 
   // In the constructor set 'owner' to the address that instantiated the contract
   // and set 'sku' to 1
   // and set 'upc' to 1
-  constructor() internal {
+  constructor() public {
     // owner = msg.sender;
     sku = 1;
     upc = 1;
@@ -154,11 +158,11 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole 
 
   // Define a function 'kill' if required
   // Defined in Ownable
-  // function kill() public {
-  //   if (msg.sender == owner) {
-  //     selfdestruct(owner);
-  //   }
-  // }
+  function kill() public {
+    if (msg.sender == owner) {
+      selfdestruct(owner);
+    }
+  }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
   function harvestItem(uint _upc,

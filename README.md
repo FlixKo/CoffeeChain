@@ -108,3 +108,37 @@ See also the list of [contributors](https://github.com/your/project/contributors
 * Ganache-cli
 * Truffle
 * IPFS
+
+
+## Rinkeby Adress of contract
+https://rinkeby.etherscan.io/address/0x55c9391b1d2c110330780c6ae1aa147add03e3eb
+
+## Test Results
+truffle test
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+ganache-cli accounts used here...
+Contract Owner: accounts[0]  0x27D8D15CbC94527cAdf5eC14B69519aE23288B95
+Farmer: accounts[1]  0x018C2daBef4904ECbd7118350A0c54DbeaE3549A
+Distributor: accounts[2]  0xCe5144391B4aB80668965F2Cc4f2CC102380Ef0A
+Retailer: accounts[3]  0x460c31107DD048e34971E57DA2F99f659Add4f02
+Consumer: accounts[4]  0xD37b7B8C62BE2fdDe8dAa9816483AeBDBd356088
+
+
+  ✓ Testing smart contract function harvestItem() that allows a farmer to harvest coffee (1531ms)
+  ✓ Testing smart contract function processItem() that allows a farmer to process coffee (979ms)
+  ✓ Testing smart contract function packItem() that allows a farmer to pack coffee (599ms)
+  ✓ Testing smart contract function sellItem() that allows a farmer to sell coffee (515ms)
+  ✓ Testing smart contract function buyItem() that allows a distributor to buy coffee (660ms)
+  ✓ Testing smart contract function shipItem() that allows a distributor to ship coffee (491ms)
+  ✓ Testing smart contract function receiveItem() that allows a retailer to mark coffee received (591ms)
+  ✓ Testing smart contract function purchaseItem() that allows a consumer to purchase coffee (638ms)
+  ✓ Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain (216ms)
+  ✓ Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain (200ms)
+
+  10 passing (6s)
