@@ -1,27 +1,34 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.12;
+import "../coffeebase/SupplyChain.sol";
 
 /// Provides basic authorization control
-contract Ownable {
-    address private origOwner;
+contract Ownable is SupplyChain {
+    address payable private origOwner;
 
     // Define an Event
     event TransferOwnership(address indexed oldOwner, address indexed newOwner);
 
     /// Assign the contract to an owner
-    constructor () internal {
+    constructor () public payable {
         origOwner = msg.sender;
         emit TransferOwnership(address(0), origOwner);
     }
 
     /// Look up the address of the owner
-    function owner() public view returns (address) {
+    function getOwner() public view returns (address) {
         return origOwner;
     }
 
     /// Define a function modifier 'onlyOwner'
     modifier onlyOwner() {
-        require(isOwner());
+        require(isOwner(), 'ACCESS DENIED');
         _;
+    }
+
+    function kill() public {
+        if (msg.sender == origOwner) {
+            selfdestruct(origOwner);
+        }
     }
 
     /// Check if the calling address is the owner of the contract
@@ -36,13 +43,13 @@ contract Ownable {
     }
 
     /// Define a public function to transfer ownership
-    function transferOwnership(address newOwner) public onlyOwner {
+    function transferOwnership(address payable newOwner) public onlyOwner {
         _transferOwnership(newOwner);
     }
 
     /// Define an internal function to transfer ownership
-    function _transferOwnership(address newOwner) internal {
-        require(newOwner != address(0));
+    function _transferOwnership(address payable newOwner) internal {
+        require(newOwner != address(0), 'NEW ADDRESS INVALID');
         emit TransferOwnership(origOwner, newOwner);
         origOwner = newOwner;
     }
